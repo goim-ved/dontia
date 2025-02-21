@@ -1,0 +1,103 @@
+[
+    {
+      "question": "Qu'est-ce que la morphologie dentaire ?",
+      "answer": "C'est l'étude de la forme, de la taille et de la disposition des dents dans la cavité buccale."
+    },
+    {
+      "question": "Quels sont les différents types de dents chez l'humain ?",
+      "answer": "Les dents se répartissent en incisives, canines, prémolaires et molaires, chacune ayant une fonction précise."
+    },
+    {
+      "question": "Comment se déroule le développement dentaire ?",
+      "answer": "Le développement dentaire implique la formation du bourgeon dentaire, la différenciation des tissus et l'éruption dentaire."
+    },
+    {
+      "question": "Que comprend l'histologie de l'émail ?",
+      "answer": "L'émail est composé de cristaux d'hydroxyapatite organisés en prismes, assurant une grande résistance."
+    },
+    {
+      "question": "Quelle est la composition histologique de la dentine ?",
+      "answer": "La dentine se compose de tubules dentinaires, d'une matrice organique et d'hydroxyapatite, rendant la dentine moins minéralisée que l'émail."
+    },
+    {
+      "question": "Qu'est-ce que la pulpe dentaire ?",
+      "answer": "La pulpe est le tissu conjonctif central de la dent, contenant des nerfs et des vaisseaux sanguins."
+    },
+    {
+      "question": "Quelles sont les phases de l'éruption dentaire ?",
+      "answer": "L'éruption dentaire se décompose en plusieurs étapes, depuis la formation du germe dentaire jusqu'à l'apparition de la dent dans la cavité buccale."
+    },
+    {
+      "question": "Quel rôle jouent les gencives dans la santé buccale ?",
+      "answer": "Les gencives protègent les racines des dents et assurent le soutien de l'ensemble de la dentition."
+    },
+    {
+      "question": "Qu'est-ce que l'occlusion dentaire ?",
+      "answer": "L'occlusion dentaire décrit l'alignement et le contact entre les dents supérieures et inférieures lors de la mastication."
+    },
+    {
+      "question": "Quels sont les principes de base de la radiologie dentaire ?",
+      "answer": "La radiologie dentaire permet de visualiser les structures internes des dents et des os pour diagnostiquer des pathologies non visibles cliniquement."
+    },
+    {
+      "question": "Comment se réalise la stérilisation en dentisterie ?",
+      "answer": "La stérilisation se pratique généralement par autoclavage, qui utilise la vapeur sous pression pour éliminer tous les micro-organismes."
+    },
+    {
+      "question": "Quelles techniques de prévention des caries sont enseignées ?",
+      "answer": "La prévention inclut le brossage régulier, l'utilisation de fluorures et la réduction de la consommation de sucres."
+    },
+    {
+      "question": "Quel est le rôle de la salive dans la santé bucco-dentaire ?",
+      "answer": "La salive neutralise les acides, favorise la reminéralisation de l'émail et contribue à la digestion initiale."
+    },
+    {
+      "question": "Quels types d'obturations dentaires existent ?",
+      "answer": "Les obturations peuvent être réalisées avec des amalgames, des résines composites ou des ionomères de verre, selon le cas clinique."
+    },
+    {
+      "question": "Quels matériaux sont utilisés pour la restauration dentaire ?",
+      "answer": "Les restaurations dentaires utilisent des composites, des ciments et parfois des alliages métalliques pour des couronnes ou bridges."
+    },
+    {
+      "question": "Pourquoi est-il important d'avoir une bonne hygiène bucco-dentaire ?",
+      "answer": "Une hygiène rigoureuse prévient l'accumulation de plaque, les caries et les maladies parodontales."
+    },
+    {
+      "question": "Quels micro-organismes sont fréquemment impliqués dans les infections buccales ?",
+      "answer": "Les bactéries telles que Streptococcus mutans et Porphyromonas gingivalis sont souvent responsables des infections buccales."
+    },
+    {
+      "question": "Quels sont les principes de l'anesthésie locale en dentisterie ?",
+      "answer": "L'anesthésie locale consiste à injecter un anesthésique pour engourdir une zone spécifique, permettant des interventions sans douleur."
+    },
+    {
+      "question": "Quels sont les facteurs de risque de la parodontite ?",
+      "answer": "Une mauvaise hygiène buccale, le tabagisme et des prédispositions génétiques sont des facteurs de risque majeurs."
+    },
+    {
+      "question": "Qu'est-ce que la dentisterie conservatrice ?",
+      "answer": "La dentisterie conservatrice vise à préserver le tissu dentaire en traitant les caries de manière minimale."
+    },
+    {
+      "question": "Comment se pratique le détartrage ?",
+      "answer": "Le détartrage consiste à éliminer la plaque et le tartre accumulés sur les surfaces dentaires et sous les gencives."
+    },
+    {
+      "question": "Qu'est-ce que le surfaçage radiculaire ?",
+      "answer": "Le surfaçage radiculaire est une procédure qui lisse la surface des racines pour favoriser la guérison des tissus parodontaux."
+    },
+    {
+      "question": "Comment la douleur est-elle gérée en dentisterie ?",
+      "answer": "La douleur est contrôlée par l'anesthésie locale et, en post-opératoire, par des anti-inflammatoires et des analgésiques appropriés."
+    },
+    {
+      "question": "Quelles complications peuvent survenir lors d'une extraction dentaire ?",
+      "answer": "Les complications comprennent l'infection, la formation d'alvéolite (dry socket) et des saignements prolongés."
+    },
+    {
+      "question": "Pourquoi la déontologie est-elle essentielle dans la pratique dentaire ?",
+      "answer": "Elle garantit une pratique éthique, la confidentialité des patients et le respect des normes professionnelles."
+    }
+  ]
+  

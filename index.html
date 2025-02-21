@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dontia - Flashcards Dentaires</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="logo">
+          <i class="fas fa-tooth"></i>
+          <h1>Dontia</h1>
+        </div>
+        <button id="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <h2>Flashcards Dentaires</h2>
+        <p>Cliquez sur le bouton ci-dessous pour charger 3 flashcards aléatoires.</p>
+      </section>
+      <section class="action-section">
+        <div class="action-wrapper">
+          <button id="load-btn">
+            <span>Charger 3 Flashcards</span>
+            <i class="fas fa-folder-open"></i>
+          </button>
+        </div>
+      </section>
+      <section class="flashcards-container">
+        <div id="flashcards-wrapper">
+          <div class="placeholder-message">
+            <i class="fas fa-lightbulb"></i>
+            <p>Les flashcards apparaîtront ici</p>
+          </div>
+        </div>
+      </section>
+      <div class="loading-animation hidden">
+        <div class="tooth-loader"></div>
+        <p>Chargement des flashcards...</p>
+      </div>
+    </main>
+    <footer>
+      <p>Made by Ved with <span class="heart">♥</span></p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
