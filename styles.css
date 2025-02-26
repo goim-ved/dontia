@@ -1,23 +1,25 @@
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #3b82f6;
-    --background: #ffffff;
-    --surface: #f8fafc;
-    --text: #1e293b;
-    --text-light: #64748b;
-    --border: #e2e8f0;
-    --shadow: rgba(0, 0, 0, 0.1);
+    --primary-color: #F06292; /* Pink */
+    --secondary-color: #EC407A; /* Deeper pink */
+    --accent-color: #FFCDD2; /* Light pink */
+    --background: #FFF9FA; /* Very light pink background */
+    --surface: #FFEEEE; /* Soft pink surface */
+    --text: #5D4157; /* Deep mauve for text */
+    --text-light: #9E7B9B; /* Lighter mauve */
+    --border: #F8BBD0; /* Light pink border */
+    --shadow: rgba(244, 143, 177, 0.15); /* Pink shadow */
 }
 
 [data-theme="dark"] {
-    --primary-color: #60a5fa;
-    --secondary-color: #3b82f6;
-    --background: #0f172a;
-    --surface: #1e293b;
-    --text: #f1f5f9;
-    --text-light: #94a3b8;
-    --border: #334155;
-    --shadow: rgba(0, 0, 0, 0.3);
+    --primary-color: #F48FB1; /* Lighter pink for dark mode */
+    --secondary-color: #F06292; /* Pink */
+    --accent-color: #AD1457; /* Deep pink accent */
+    --background: #37282C; /* Dark mauve background */
+    --surface: #4A3640; /* Slightly lighter dark mauve */
+    --text: #FFD8E6; /* Light pink text */
+    --text-light: #E1BEE7; /* Light lavender text */
+    --border: #6A4356; /* Dark mauve border */
+    --shadow: rgba(233, 30, 99, 0.3); /* Pink shadow */
 }
 
 * {
@@ -31,6 +33,7 @@ body {
     background-color: var(--background);
     color: var(--text);
     transition: background-color 0.3s ease, color 0.3s ease;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f8bbd0' fill-opacity='0.2'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .container {
@@ -117,18 +120,20 @@ nav {
     padding: 1rem 2rem;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     border: none;
-    border-radius: 12px;
+    border-radius: 20px; /* Rounded corners */
     color: white;
     font-weight: 500;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px var(--shadow);
 }
 
 #load-btn:hover {
     transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--shadow);
 }
 
 #load-btn i {
@@ -159,6 +164,7 @@ nav {
     transition: transform 0.8s;
     transform-style: preserve-3d;
     cursor: pointer;
+    box-shadow: 0 4px 15px var(--shadow);
 }
 
 .flashcard.flipped .flashcard-inner {
@@ -170,7 +176,7 @@ nav {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 12px;
+    border-radius: 16px; /* More rounded corners */
     padding: 1.5rem;
     background: var(--surface);
     border: 2px solid var(--border);
@@ -180,8 +186,23 @@ nav {
     font-size: 1.1rem;
 }
 
+.flashcard-front {
+    /* Add a subtle decorative element in the corners */
+    background-image: 
+        radial-gradient(circle at 10% 10%, var(--accent-color) 5px, transparent 5px),
+        radial-gradient(circle at 90% 10%, var(--accent-color) 5px, transparent 5px),
+        radial-gradient(circle at 10% 90%, var(--accent-color) 5px, transparent 5px),
+        radial-gradient(circle at 90% 90%, var(--accent-color) 5px, transparent 5px);
+}
+
 .flashcard-back {
     transform: rotateY(180deg);
+    /* Add a subtle decorative element in the corners */
+    background-image: 
+        radial-gradient(circle at 10% 10%, var(--accent-color) 5px, transparent 5px),
+        radial-gradient(circle at 90% 10%, var(--accent-color) 5px, transparent 5px),
+        radial-gradient(circle at 10% 90%, var(--accent-color) 5px, transparent 5px),
+        radial-gradient(circle at 90% 90%, var(--accent-color) 5px, transparent 5px);
 }
 
 .loading-animation {
@@ -195,8 +216,9 @@ nav {
     gap: 1rem;
     background: var(--surface);
     padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px var(--shadow);
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 4px 15px var(--shadow);
+    border: 2px solid var(--border);
 }
 
 .tooth-loader {
@@ -222,6 +244,7 @@ nav {
 .placeholder-message i {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 
 footer {
@@ -232,7 +255,7 @@ footer {
 }
 
 .heart {
-    color: #ef4444;
+    color: #F06292; /* Pink heart instead of red */
     display: inline-block;
     animation: pulse 1.5s ease infinite;
 }
@@ -255,6 +278,25 @@ footer {
     }
 }
 
+/* Add a cute custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+    border: 3px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
@@ -268,5 +310,8 @@ footer {
     #load-btn {
         width: 100%;
         justify-content: center;
+    }
+    #flashcards-wrapper {
+        grid-template-columns: 1fr;
     }
 }

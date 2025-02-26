@@ -9,7 +9,7 @@ const theme = {
         document.documentElement.setAttribute('data-theme', savedTheme);
         themeToggle.innerHTML = savedTheme === 'light'
             ? '<i class="fas fa-moon"></i>'
-            : '<i class="fas fa-sun"></i>';
+            : '<i class="fas fa-stars"></i>'; // Changed to stars for dark mode
     },
     toggle() {
         const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -18,7 +18,7 @@ const theme = {
         localStorage.setItem('theme', newTheme);
         themeToggle.innerHTML = newTheme === 'light'
             ? '<i class="fas fa-moon"></i>'
-            : '<i class="fas fa-sun"></i>';
+            : '<i class="fas fa-stars"></i>'; // Changed to stars for dark mode
     }
 };
 
@@ -28,12 +28,12 @@ const ui = {
         loadBtn.disabled = isLoading;
         loadBtn.innerHTML = isLoading 
             ? '<i class="fas fa-spinner fa-spin"></i>'
-            : '<span>Charger 3 Flashcards</span><i class="fas fa-folder-open"></i>';
+            : '<span>Charger 3 Flashcards</span><i class="fas fa-sparkles"></i>'; // Changed to sparkles
     },
     showError(message) {
         flashcardsWrapper.innerHTML = `
             <div class="placeholder-message" style="color: #ef4444;">
-                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-heart-crack"></i> <!-- Changed to broken heart -->
                 <p>${message}</p>
             </div>
         `;
@@ -72,7 +72,7 @@ const flashcards = {
         if (allFlashcards.length === 0) {
             flashcardsWrapper.innerHTML = `
                 <div class="placeholder-message" style="color: #ef4444;">
-                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-heart-crack"></i> <!-- Changed to broken heart -->
                     <p>Aucune flashcard disponible. Veuillez réessayer.</p>
                 </div>
             `;
@@ -104,20 +104,33 @@ const flashcards = {
             flashcard.style.transform = 'translateY(20px)';
             flashcardsWrapper.appendChild(flashcard);
             setTimeout(() => {
-                flashcard.style.transition = 'all 0.5s ease';
+                flashcard.style.transition = 'all 0.6s ease'; // Slightly slower animation for a gentler feel
                 flashcard.style.opacity = '1';
                 flashcard.style.transform = 'translateY(0)';
-            }, index * 100);
+            }, index * 150); // Slightly longer delay between cards
         });
     }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
     theme.init();
+    
+    // Add a small welcome message with animation
+    setTimeout(() => {
+        flashcardsWrapper.innerHTML = `
+            <div class="placeholder-message">
+                <i class="fas fa-heart"></i>
+                <p>Bienvenue dans votre espace d'étude cozy!</p>
+                <p><small>Cliquez sur le bouton pour commencer</small></p>
+            </div>
+        `;
+    }, 500);
 });
+
 themeToggle.addEventListener('click', () => {
     theme.toggle();
 });
+
 loadBtn.addEventListener('click', async () => {
     try {
         await flashcards.load();
