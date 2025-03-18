@@ -1,59 +1,331 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dontia - Flashcards Dentaires</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <title>Calculus Cheat Sheet | Elegant Mathematics</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- MathJax for beautiful math rendering -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <nav>
-        <div class="logo">
-          <i class="fas fa-heart"></i>
-          <h1>Dontia</h1>
-        </div>
-        <button id="theme-toggle">
-          <i class="fas fa-moon"></i>
-        </button>
-      </nav>
-    </header>
-    <main>
-      <section class="intro">
-        <h2>Flashcards Dentaires</h2>
-        <p>Cliquez sur le bouton ci-dessous pour charger 3 flashcards aléatoires. <i class="fas fa-magic" style="color: var(--primary-color);"></i></p>
-      </section>
-      <section class="action-section">
-        <div class="action-wrapper">
-          <button id="load-btn">
-            <span>Charger 3 Flashcards</span>
-            <i class="fas fa-sparkles"></i>
-          </button>
-        </div>
-      </section>
-      <section class="flashcards-container">
-        <div id="flashcards-wrapper">
-          <div class="placeholder-message">
-            <i class="fas fa-heart"></i>
-            <p>Les flashcards apparaîtront ici</p>
-            <p><small>Cliquez sur une carte pour la retourner</small></p>
-          </div>
-        </div>
-      </section>
-      <div class="loading-animation hidden">
-        <div class="tooth-loader"></div>
-        <p>Chargement des flashcards...</p>
-      </div>
-    </main>
-    <footer>
-      <p>Made with <span class="heart">♥</span> by Ved</p>
-    </footer>
+  <div class="theme-toggle">
+      <i class="fas fa-moon"></i>
   </div>
-  <script src="app.js"></script>
+  
+  <header>
+      <div class="logo">
+          <h1>Calculus Cheat Sheet</h1>
+          <p>Your elegant guide to mathematics</p>
+      </div>
+      <div class="search-container">
+          <input type="text" id="search" placeholder="Search topics...">
+          <button><i class="fas fa-search"></i></button>
+      </div>
+  </header>
+
+  <div class="container">
+      <aside class="sidebar">
+          <nav>
+              <ul>
+                  <li><a href="#limits" class="active">Limits</a></li>
+                  <li><a href="#derivatives">Derivatives</a></li>
+                  <li><a href="#applications-of-derivatives">Applications of Derivatives</a></li>
+                  <li><a href="#integrals">Integrals</a></li>
+                  <li><a href="#applications-of-integrals">Applications of Integrals</a></li>
+                  <li><a href="#differential-equations">Differential Equations</a></li>
+                  <li><a href="#series">Series & Sequences</a></li>
+                  <li><a href="#multivariable">Multivariable Calculus</a></li>
+              </ul>
+          </nav>
+      </aside>
+
+      <main class="content">
+          <section id="limits" class="topic-section">
+              <h2>Limits <button class="toggle-section"><i class="fas fa-chevron-up"></i></button></h2>
+              <div class="section-content">
+                  <div class="card">
+                      <h3>Definition of a Limit</h3>
+                      <div class="formula">
+                          <p>The limit of \(f(x)\) as \(x\) approaches \(a\) is \(L\):</p>
+                          <p class="math">\[\lim_{x \to a} f(x) = L\]</p>
+                          <p>This means that \(f(x)\) can be made as close to \(L\) as desired by taking \(x\) sufficiently close to \(a\).</p>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <h3>Limit Laws</h3>
+                      <div class="formula">
+                          <p>For functions \(f\) and \(g\) where \(\lim_{x \to a} f(x) = L\) and \(\lim_{x \to a} g(x) = M\):</p>
+                          <ol>
+                              <li>\(\lim_{x \to a} [f(x) + g(x)] = L + M\)</li>
+                              <li>\(\lim_{x \to a} [f(x) - g(x)] = L - M\)</li>
+                              <li>\(\lim_{x \to a} [f(x) \cdot g(x)] = L \cdot M\)</li>
+                              <li>\(\lim_{x \to a} \frac{f(x)}{g(x)} = \frac{L}{M}\), where \(M \neq 0\)</li>
+                              <li>\(\lim_{x \to a} [c \cdot f(x)] = c \cdot L\), where \(c\) is a constant</li>
+                          </ol>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <h3>Special Limits</h3>
+                      <div class="formula">
+                          <p>\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</p>
+                          <p>\(\lim_{x \to 0} \frac{1 - \cos x}{x} = 0\)</p>
+                          <p>\(\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = e\)</p>
+                      </div>
+                  </div>
+
+                  <div class="card example">
+                      <h3>Example: Evaluating Limits</h3>
+                      <div class="problem">
+                          <p>Find \(\lim_{x \to 2} \frac{x^2 - 4}{x - 2}\)</p>
+                      </div>
+                      <div class="solution">
+                          <p>Solution:</p>
+                          <p>\(\frac{x^2 - 4}{x - 2} = \frac{(x - 2)(x + 2)}{x - 2} = x + 2\) (for \(x \neq 2\))</p>
+                          <p>Therefore, \(\lim_{x \to 2} \frac{x^2 - 4}{x - 2} = \lim_{x \to 2} (x + 2) = 4\)</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section id="derivatives" class="topic-section">
+              <h2>Derivatives <button class="toggle-section"><i class="fas fa-chevron-up"></i></button></h2>
+              <div class="section-content">
+                  <div class="card">
+                      <h3>Definition of the Derivative</h3>
+                      <div class="formula">
+                          <p>The derivative of a function \(f(x)\) is defined as:</p>
+                          <p class="math">\[f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\]</p>
+                          <p>It represents the rate of change of the function at a point.</p>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <h3>Basic Differentiation Rules</h3>
+                      <div class="formula">
+                          <ol>
+                              <li>Constant Rule: \(\frac{d}{dx}[c] = 0\)</li>
+                              <li>Power Rule: \(\frac{d}{dx}[x^n] = nx^{n-1}\)</li>
+                              <li>Sum Rule: \(\frac{d}{dx}[f(x) + g(x)] = f'(x) + g'(x)\)</li>
+                              <li>Product Rule: \(\frac{d}{dx}[f(x) \cdot g(x)] = f'(x) \cdot g(x) + f(x) \cdot g'(x)\)</li>
+                              <li>Quotient Rule: \(\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{[g(x)]^2}\)</li>
+                              <li>Chain Rule: \(\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)\)</li>
+                          </ol>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <h3>Common Derivatives</h3>
+                      <div class="formula">
+                          <p>\(\frac{d}{dx}[\sin x] = \cos x\)</p>
+                          <p>\(\frac{d}{dx}[\cos x] = -\sin x\)</p>
+                          <p>\(\frac{d}{dx}[\tan x] = \sec^2 x\)</p>
+                          <p>\(\frac{d}{dx}[e^x] = e^x\)</p>
+                          <p>\(\frac{d}{dx}[\ln x] = \frac{1}{x}\)</p>
+                          <p>\(\frac{d}{dx}[a^x] = a^x \ln a\)</p>
+                          <p>\(\frac{d}{dx}[\log_a x] = \frac{1}{x \ln a}\)</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section id="applications-of-derivatives" class="topic-section">
+              <h2>Applications of Derivatives <button class="toggle-section"><i class="fas fa-chevron-down"></i></button></h2>
+              <div class="section-content" style="display: none;">
+                  <div class="card">
+                      <h3>Related Rates</h3>
+                      <div class="formula">
+                          <p>If \(x\) and \(y\) are related by an equation, differentiating with respect to time \(t\) gives rates \(\frac{dx}{dt}\) and \(\frac{dy}{dt}\).</p>
+                          <p>Example: For a circle \(x^2 + y^2 = r^2\), differentiating yields:</p>
+                          <p class="math">\[\;2x\frac{dx}{dt} + 2y\frac{dy}{dt} = 0\]</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Optimization</h3>
+                      <div class="formula">
+                          <p>To find extrema, set the first derivative to zero:</p>
+                          <p class="math">\[\;f'(x)=0\]</p>
+                          <p>Then use the second derivative test: if \(f''(x) > 0\) it is a local minimum, and if \(f''(x) < 0\) it is a local maximum.</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Mean Value Theorem</h3>
+                      <div class="formula">
+                          <p>If \(f(x)\) is continuous on \([a,b]\) and differentiable on \((a,b)\), then there exists \(c\) in \((a,b)\) such that:</p>
+                          <p class="math">\[\;f'(c) = \frac{f(b)-f(a)}{b-a}\]</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section id="integrals" class="topic-section">
+              <h2>Integrals <button class="toggle-section"><i class="fas fa-chevron-down"></i></button></h2>
+              <div class="section-content" style="display: none;">
+                  <div class="card">
+                      <h3>Indefinite Integrals</h3>
+                      <div class="formula">
+                          <p>The antiderivative of \(f(x)\) is given by:</p>
+                          <p class="math">\[\int f(x)\,dx = F(x) + C\]</p>
+                          <p>For example, \(\int x^n\,dx = \frac{x^{n+1}}{n+1} + C\) for \(n \neq -1\).</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Definite Integrals</h3>
+                      <div class="formula">
+                          <p>The definite integral from \(a\) to \(b\) is computed as:</p>
+                          <p class="math">\[\int_a^b f(x)\,dx = F(b) - F(a)\]</p>
+                          <p>This is the essence of the Fundamental Theorem of Calculus.</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Techniques of Integration</h3>
+                      <div class="formula">
+                          <p><strong>Integration by Parts:</strong></p>
+                          <p class="math">\[\int u\,dv = uv - \int v\,du\]</p>
+                          <p><strong>Substitution Rule:</strong></p>
+                          <p class="math">\[\int f(g(x))g'(x)\,dx = \int f(u)\,du\]</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section id="applications-of-integrals" class="topic-section">
+              <h2>Applications of Integrals <button class="toggle-section"><i class="fas fa-chevron-down"></i></button></h2>
+              <div class="section-content" style="display: none;">
+                  <div class="card">
+                      <h3>Area Under a Curve</h3>
+                      <div class="formula">
+                          <p>The area under the curve \(f(x)\) from \(a\) to \(b\) is given by:</p>
+                          <p class="math">\[\text{Area} = \int_a^b f(x)\,dx\]</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Volume of Revolution (Disk Method)</h3>
+                      <div class="formula">
+                          <p>When revolving \(f(x)\) about the x-axis:</p>
+                          <p class="math">\[V = \pi\int_a^b [f(x)]^2\,dx\]</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Volume of Revolution (Shell Method)</h3>
+                      <div class="formula">
+                          <p>For rotation about the y-axis:</p>
+                          <p class="math">\[V = 2\pi\int_a^b x\,f(x)\,dx\]</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Arc Length</h3>
+                      <div class="formula">
+                          <p>The length of the curve \(y = f(x)\) from \(a\) to \(b\) is:</p>
+                          <p class="math">\[
+L = \int_a^b \sqrt{1 + [f'(x)]^2}\,dx
+\]</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section id="differential-equations" class="topic-section">
+              <h2>Differential Equations <button class="toggle-section"><i class="fas fa-chevron-down"></i></button></h2>
+              <div class="section-content" style="display: none;">
+                  <div class="card">
+                      <h3>Separable Differential Equations</h3>
+                      <div class="formula">
+                          <p>A separable differential equation can be written as:</p>
+                          <p class="math">\[\frac{dy}{dx} = g(x)h(y)\]</p>
+                          <p>Separate variables to obtain:</p>
+                          <p class="math">\[\frac{dy}{h(y)} = g(x)\,dx\]</p>
+                          <p>Then integrate both sides.</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Linear Differential Equations</h3>
+                      <div class="formula">
+                          <p>A first-order linear equation takes the form:</p>
+                          <p class="math">\[\frac{dy}{dx} + p(x)y = q(x)\]</p>
+                          <p>Using an integrating factor:</p>
+                          <p class="math">\[\mu(x) = e^{\int p(x)\,dx}\]</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section id="series" class="topic-section">
+              <h2>Series & Sequences <button class="toggle-section"><i class="fas fa-chevron-down"></i></button></h2>
+              <div class="section-content" style="display: none;">
+                  <div class="card">
+                      <h3>Arithmetic Sequences</h3>
+                      <div class="formula">
+                          <p>The \(n\)th term of an arithmetic sequence is:</p>
+                          <p class="math">\[\displaystyle a_n = a_1 + (n-1)d\]</p>
+                          <p>The sum of the first \(n\) terms is:</p>
+                          <p class="math">\[\displaystyle S_n = \frac{n}{2}\Big(2a_1 + (n-1)d\Big)\]</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Geometric Series</h3>
+                      <div class="formula">
+                          <p>The \(n\)th term of a geometric sequence is:</p>
+                          <p class="math">\[\displaystyle a_n = a_1 \cdot r^{n-1}\]</p>
+                          <p>For \(|r| < 1\), the sum to infinity is:</p>
+                          <p class="math">\[\displaystyle S_\infty = \frac{a_1}{1-r}\]</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Taylor & Maclaurin Series</h3>
+                      <div class="formula">
+                          <p>A function \(f(x)\) can be expressed as:</p>
+                          <p class="math">\[\displaystyle f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n\]</p>
+                          <p>For \(a = 0\), this series is known as the Maclaurin series.</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section id="multivariable" class="topic-section">
+              <h2>Multivariable Calculus <button class="toggle-section"><i class="fas fa-chevron-down"></i></button></h2>
+              <div class="section-content" style="display: none;">
+                  <div class="card">
+                      <h3>Partial Derivatives</h3>
+                      <div class="formula">
+                          <p>For a function \(z = f(x, y)\), the partial derivatives are:</p>
+                          <p class="math">\[\frac{\partial z}{\partial x} \quad \text{and} \quad \frac{\partial z}{\partial y}\]</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Multiple Integrals</h3>
+                      <div class="formula">
+                          <p>Double integrals over a region \(D\):</p>
+                          <p class="math">\[\iint_D f(x,y)\,dA\]</p>
+                          <p>Triple integrals over a region \(E\):</p>
+                          <p class="math">\[\iiint_E f(x,y,z)\,dV\]</p>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <h3>Vector Calculus Theorems</h3>
+                      <div class="formula">
+                          <p><strong>Green's Theorem:</strong></p>
+                          <p class="math">\[\oint_C (L\,dx + M\,dy) = \iint_D \left(\frac{\partial M}{\partial x} - \frac{\partial L}{\partial y}\right)dA\]</p>
+                          <p><strong>Divergence Theorem:</strong></p>
+                          <p class="math">\[\iint_S \mathbf{F} \cdot d\mathbf{S} = \iiint_E (\nabla \cdot \mathbf{F})\,dV\]</p>
+                          <p><strong>Stokes' Theorem:</strong></p>
+                          <p class="math">\[\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F})\cdot d\mathbf{S}\]</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+      </main>
+  </div>
+
+  <footer>
+      <p>© 2025 Calculus Cheat Sheet | Designed with ♥ for mathematics enthusiasts</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
